@@ -101,3 +101,5 @@ False
 >>> (num_1*3+10 >= num_3 - 2 <= (False * False) != True) > True > num_2
 False
 >>> (True*num_1*3+10 >= num_3 - 2 <= False * True != False) > True > num_2 != (True*True)%1
+
+#(10-9)*False+True and (32/4*True or 40%5)
