@@ -91,3 +91,13 @@ for row in range(rows):
         print("*", end="")
     space += 1
     print()
+
+# Assignment :
+
+'''
+     *
+    ***
+   *****
+  *******
+ *********
+'''
