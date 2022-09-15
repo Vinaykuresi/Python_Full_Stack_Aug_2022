@@ -1,3 +1,5 @@
+import json
+
 # # person details
 person_detail = ["Krishna", 19, "Bsc", "Junior Software Developer"]
 print(person_detail[0])
@@ -54,11 +56,13 @@ def recursion(person_details):
 recursion(person_details)
 
 # original Dicitonary
-print(person_details)
+# print(person_details)
+print(json.dumps(person_details, indent=4))
 
 print()
 # shallow Dictionary
-print(shallow_personal_details)
+# print(shallow_personal_details)
+print(json.dumps(shallow_personal_details, indent=4))
 
 
 
