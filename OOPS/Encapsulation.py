@@ -7,6 +7,8 @@ class Mobile:
         print("Id of self in Contructor : ", id(self))
         self.brand = brand
         self.price = price 
+        # private variable
+        self.__location = "Tirupati"
 
     # behavior/opearations
     def display(self):
@@ -15,16 +17,20 @@ class Mobile:
     def update_price(self, price):
         self.price = price
 
+    # enapsualation
+    # setter
+    def set_location(self, location):
+        self.__location = location
+    
+    # getter
+    def get_location(self):
+        return self.__location
+
+
 # Object Reference
 mob1 = Mobile("Apple",  100000)
 mob2 = Mobile("Samsing", 34000)
 
-# printing the properties
-# print(mob1.brand, " : ", mob1.price)
-
-# print(mob2.brand, " : ", mob2.price)
-
-# invoking the behavior
-mob1.display()
-mob1.update_price(80000)
-mob1.display()
+print(mob1.get_location())
+mob1.set_location("Bangalore")
+print(mob1.get_location())

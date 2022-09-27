@@ -1,7 +1,4 @@
 
-from wsgiref.simple_server import demo_app
-
-
 try : 
     demo_file = open("demo.txt",  "w")
     demo_file.write("Garuda Career Solutions.")
