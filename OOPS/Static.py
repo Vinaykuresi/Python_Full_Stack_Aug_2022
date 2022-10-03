@@ -1,6 +1,7 @@
 # Class
 class Mobile:
     discount = 50
+    __discount = 60
                 # parameters
     # Constructor
     def __init__(self, brand, price):
@@ -10,6 +11,14 @@ class Mobile:
         self.price = price 
         # private variable
         self.__location = "Tirupati"
+
+    @staticmethod
+    def get_discount():
+        return Mobile.__discount
+
+    @staticmethod
+    def set_discount(value):
+        Mobile.__discount = value
 
     # behavior/opearations
     def display(self):
