@@ -1,8 +1,19 @@
+
+class Product: 
+
+    def review(self):
+        print("Product of Electronic Device")
+    # def __init__(self):
+    #     gadget_type = "Electronic device"
+    #     portable_type = True
+
+    # def review(self):
+    #     return [self.gadget_type, self.portable_type]
+
 # Class
+# Multilevel Inheritance
+# class Mobile(Product):
 class Mobile:
-    discount = 50
-    __discount = 60
-                # parameters
     # Constructor
     def __init__(self, brand, price):
         # attributes/properties
@@ -11,14 +22,6 @@ class Mobile:
         self.price = price 
         # private variable
         self.__location = "Tirupati"
-
-    @staticmethod
-    def get_discount():
-        return Mobile.__discount
-
-    @staticmethod
-    def set_discount(value):
-        Mobile.__discount = value
 
     # behavior/opearations
     def display(self):
@@ -36,22 +39,22 @@ class Mobile:
     def get_location(self):
         return self.__location
 
+# Inheritance
+class FeaturePhone(Mobile) : 
+    pass
+# Inheritance
+# Multiple Inheritance
+class SmartPhone(Mobile, Product) : 
+    pass 
 
-# Object Reference
-mob1 = Mobile("Apple",  100000)
-mob2 = Mobile("Samsing", 34000)
 
-# print(mob1.get_location())
-# mob1.set_location("Bangalore")
-# print(mob1.get_location())
+smartPhone = SmartPhone("Iphone", 100000)
 
-# # accesing the static or class level variable
-# print(mob1.discount)
-# print(Mobile.discount)
+print(smartPhone.display())
 
-# Mobile.discount = 30
+print(smartPhone.brand)
 
-# print(mob2.discount)
+# print(smartPhone.__location)
+print(smartPhone.get_location())
 
-Mobile.set_discount(30)
-print(Mobile.get_discount())
+print(smartPhone.review())

@@ -1,0 +1,16 @@
+
+1. Categories of Elements :
+
+        1) Container Elements
+            ex : <h1>Intro to HTML</h1>
+
+        2) Empty Elements
+            ex : <br/>
+
+2. Type of Elements : 
+
+        1) Block Elements
+            ex :  h1 ... h6, 
+        
+        2) Inline Elements
+            ex : span 
