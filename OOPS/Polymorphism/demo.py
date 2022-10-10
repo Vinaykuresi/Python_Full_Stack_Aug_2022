@@ -1,7 +1,5 @@
 
 # class Mobile(Product):
-import ssl
-
 
 class Mobile:
     # Constructor

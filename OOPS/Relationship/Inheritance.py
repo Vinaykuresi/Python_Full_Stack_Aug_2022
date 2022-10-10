@@ -47,7 +47,7 @@ class FeaturePhone(Mobile) :
 class SmartPhone(Mobile, Product) : 
     pass 
 
-
+# object creation
 smartPhone = SmartPhone("Iphone", 100000)
 
 print(smartPhone.display())
