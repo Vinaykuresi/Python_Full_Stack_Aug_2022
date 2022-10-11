@@ -12,7 +12,10 @@ class CreditCard:
 """
 
 class InvalidCase(Exception):
-    pass
+    def __init__(self, price, balance):
+        msg = "The actual price is  : ", price, " but your balance is  : ", balance
+        print("Message : ", msg)
+        super().__init__(msg)
 
 class WrongCard(Exception):
     pass
@@ -27,7 +30,8 @@ class Customer:
         if card_no not in self.cards:
             raise WrongCard("The given card details is not Valid")
         if price > self.cards[card_no].balance : 
-            raise InvalidCase("The balance is insufficient to purchase the items")
+            raise InvalidCase(price, self.cards[card_no].balance)
+            # raise InvalidCase("The balance is insufficient to purchase the items")
 
 card1 = CreditCard(1001, 2500)
 card2 = CreditCard(2002, 3000)
