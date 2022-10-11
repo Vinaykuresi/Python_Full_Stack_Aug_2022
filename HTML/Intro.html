@@ -7,35 +7,70 @@
         <meta name="author" content="Vinay Kumar Kuresi" />
     </head>
     <body>
-        <h1>HTML Introduction</h1>
-        <h5>Categories and Type of Elements</h5>
+        <!-- <h1>HTML Introduction</h1> -->
+        
+        <!-- Categories of elements -->
+        <!-- <h5>Categories and Type of Elements</h5>
+        <h4>Container elements</h4>
+        <h4>Empty elements</h4> -->
 
-        <!-- Block Level Elment -->
-        <div>1) Block level Elements</div>
-        <div>2) Inline Elements</div>
+        <!-- Type of elements -->
+        <!-- <div>1) Block level Elements</div>
+        <div>2) Inline Elements</div> -->
         <br/>
         <!-- inline Element -->
-        <span>1) Block level Elements</span>
-        <span>2) Inline Elements</span>
+        <!-- <span>1) Block level Elements</span>
+        <span>2) Inline Elements</span> -->
 
         <br/>
 
-        <form name="login_form" action="about.html" method="post" style="width: 500px; height: 300px; background-color : #00ffb8;">
+        <!-- form element -->
+        <form name="login_form" action="about.html" method="post" style="width: 500px; height: 400px; background-color : #00ffb8; align-items: center; position : relative; top:15%; left : 25% ">
             <!-- html attribute -->
-            <div style="align-items: center; position : absolute; top:45%; left : 12% ">
-                <input placeholder="username" type="text"  /><br/>
-                <input placeholder="password" type="password" /><br/>
+            <div style="align-items: center; position : absolute; top:10%; left : 10% ">
+
+                <!-- label elements -->
+                <label for="username">Enter the Username</label>
+                <!-- input elements -->
+                <input id="username" placeholder="username" maxlength="10" type="text"  required/><br/>
+                <label for="password">Enter the password</label>
+                <input id="password" placeholder="password" minlength="7" type="password"  required/><br/>
                 <div>
                     <h4>Select Gender</h4>
                     <input value="male" type="radio" name="gender"/>male
                     <input value="female" type="radio" name="gender"/>female
                 </div>
+
+                <!-- select element -->
+                <label for="qualification">Highest Degree</label>
+                <select id="qualification">
+                    <option>BCA</option>
+                    <option>Btech</option>
+                    <option>MCA</option>
+                    <option>M.sc</option>
+                </select><br/>
+
+                <label for="textarea"></label>
+                <textarea id="textarea" rows="5" cols="20" disabled></textarea>
+                <br/>
+                <!-- input elements -->
                 <input type="checkbox" />
                 <input value="button" type="button" />
                 <input type="submit" />
                 <input type="reset" />
+
+                <!-- <div>
+                    <input type="date" /><br/>
+                    <input type="email" /><br/>
+                    <input type="color" /><br/>
+                    <input type="range" /><br/>
+                    <input type="url" /><br/>
+                </div> -->
             </div>
         </form>
-
+        <script>
+            var details = document.getElementsByName("gender");
+            console.log(details[1].defaultValue)
+        </script>
     </body>
 </html>
