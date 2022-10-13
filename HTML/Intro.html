@@ -26,13 +26,45 @@
 
         <!-- form element -->
         <form name="login_form" action="about.html" method="post" style="width: 500px; height: 400px; background-color : #00ffb8; align-items: center; position : relative; top:15%; left : 25% ">
+            <table border="2px solid black">
+                <thead>
+                    <tr>
+                        <th>
+                            Employee ID
+                        </th>
+                        <th>
+                            Employee Name
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1001
+                        </td>
+                        <td>
+                            Vinay
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1002
+                        </td>
+                        <td>
+                            Kumar
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <input type="text" style="width: 200px;" /> -->
             <!-- html attribute -->
-            <div style="align-items: center; position : absolute; top:10%; left : 10% ">
+            <!-- <div style="align-items: center; position : absolute; top:10%; left : 10% "> -->
 
                 <!-- label elements -->
-                <label for="username">Enter the Username</label>
+                <!-- <label for="username">Enter the Username</label> -->
                 <!-- input elements -->
-                <input id="username" placeholder="username" maxlength="10" type="text"  required/><br/>
+                <!-- <input id="username" placeholder="username" maxlength="10" type="text"  required/><br/>
                 <label for="password">Enter the password</label>
                 <input id="password" placeholder="password" minlength="7" type="password"  required/><br/>
                 <div>
@@ -41,23 +73,38 @@
                     <input value="female" type="radio" name="gender"/>female
                 </div>
 
+                <p>
+                    <span>This is span one</span>
+                    <span>This is span two</span>
+                    <span>This is span three</span>
+                </p>
+
+                <p>
+                    <div>This is span one</div>
+                    <div>This is span two</div>
+                    <div>This is span three</div>
+                </p> -->
                 <!-- select element -->
-                <label for="qualification">Highest Degree</label>
+                <!-- <label for="qualification">Highest Degree</label>
                 <select id="qualification">
                     <option>BCA</option>
                     <option>Btech</option>
                     <option>MCA</option>
                     <option>M.sc</option>
-                </select><br/>
+                </select><br/> -->
 
-                <label for="textarea"></label>
+                <!-- <label for="textarea"></label>
                 <textarea id="textarea" rows="5" cols="20" disabled></textarea>
-                <br/>
+                <br/> -->
                 <!-- input elements -->
-                <input type="checkbox" />
-                <input value="button" type="button" />
-                <input type="submit" />
-                <input type="reset" />
+                <!-- <input type="checkbox" /> -->
+                <!-- <input value="button" type="button" /> -->
+                <!-- <input type="submit" /> -->
+                <!-- <input type="reset" /> -->
+
+                <!-- <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button">Button</button> -->
 
                 <!-- <div>
                     <input type="date" /><br/>
@@ -66,7 +113,7 @@
                     <input type="range" /><br/>
                     <input type="url" /><br/>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </form>
         <script>
             var details = document.getElementsByName("gender");
