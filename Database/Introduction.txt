@@ -1,0 +1,79 @@
+DBMS : 
+	Data Integrity : 
+		1) Accuracy
+			a) Constraints
+		2) Consistency	
+		
+		Integrity Types :
+			1) Entity Integrity
+				ex: PRIMARY KEY
+			2) Domain Integrity
+				ex: DATA TYPES,
+					CHECK CONSTRAINT
+			3) Referential Integrity
+				ex: FOREIGN KEY
+				
+				
+				
+	SQL Commands and Data Types :
+	
+		Strucutred Query Language features : 
+			
+				1) Data Definition Language
+					a) Specify Structure -> schema of a relational database
+					b) DDL : creation, modification and deletion of database objects : 
+						1) Tables
+						2) Views
+						3) Stored Procedures
+						4) Indexs
+						5) COnstraints
+						
+						Output : the ouput of DDL is placed in Data dictionary which contains metadata i.e, data about data 
+						
+						DDL statements : 
+							1) CREATE :
+									create new database objects
+							2) ALTER : 
+									modify existing database objects 
+							3) DROP : 
+									delete existing database objects 
+							4) TRUNCATE : 
+									remove all rows from table
+									
+				2) Data Manipulation Language
+					a) Specify commands -> used to make changes to the database.
+					b) DML : insertion, selection, updation, deletion of database objects : 
+						1) Tables 
+					
+						DML statements : 
+							1) INSERT : 
+									inserts data into the table 
+									create new rows in tables
+							2) UPDATE : 
+									update existing data within a table 
+									modify data in tables
+							3) DELETE : 
+									delete records from a database table 
+									delete data from tables
+							4) SELECT : 
+									select retieves data from the table 
+									retieve data from tables
+									
+				3) Data Control Language
+					a) Enables users to provide access to various database objects like :
+							1) Views 
+							2) Tables 
+							3) Stored Procedures.
+					b) Typically DBAs(Database Administrators) have access to grant and revoke privileges.
+					
+						DCL statements : 
+							1) GRANT : 
+								Provide access rights on database
+							2) REVOKE : 
+								Withdraw access rights on database
+				
+				4) Transaction Control Language
+					a) Specifies commands for beginning and ending a transaction.
+					
+		
+		

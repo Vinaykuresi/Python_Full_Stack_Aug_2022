@@ -1,0 +1,339 @@
+
+DBMS(Database management system) : 
+1) Data structure (format) -> in the way a data will be stored.
+    ex : XML, Windows.registry
+
+    logic : [{
+        cust_id : 1001,
+        name : "Vinay",
+        address : "Tiruapti"
+    },
+    {
+        cust_id : 1001,
+        name : "Vinay",
+        address : "Tiruapti"
+    },
+    {
+        cust_id : 1001,
+        name : "Vinay",
+        address : "Tiruapti"
+
+    }] -> 1) nosql database
+
+          2) heirarical database
+
+          3) Network database 
+
+          4) rdbms database 
+
+RDBMS(Relational Database management system) : 
+    ex : 
+
+    1) Customer : 
+
+        Customer ID     Customer Name       Contact name        address
+        1001            Vinay               vinay               tirupati
+        2002            Kumar               rajesh              hyderabad
+        3003            suresh              suresh              bangalore
+        4004            praveen             lilly               tirupati
+
+    2) Orders : 
+
+        Order ID        Customer ID         Employee ID         Order Date
+        10301           4004                A204                20-08-2022
+        10302           4004                A204                22-08-2022
+        10303           2002                A202                19-08-2022
+        10304           1001                A201                07-08-2022
+
+        SQL -> structured query language
+
+
+CREATE DATABASE SampleDB;
+
+Database : 
+    1) data management
+    2) transaction support
+    3) concurrency control
+    4) recovery
+    5) security
+    6) integrity 
+    7) Utilities
+
+Types of Database Systems : 
+    1) Heirarical database 
+    2) Network database
+    3) Relational database 
+        ex : DB2, Oracle, Sql Server, MySql etc
+    4) NoSql database(Not only sql)
+        1) Key-value pair
+        2) Graph 
+        3) Document data structure
+
+        ex : Cassandra, MongoDb, CouchDB, OrientDB, HBASE etc.
+
+Relational Model : 
+
+    1) Tables(Name)
+    2) Attribute(Column Name)
+    3) Tuple(row)
+    4) Cardinality, ex : 4
+    5) Degree of relation, ex : 4
+    6) NULL : unknown or not applicable
+    7) Domain : { vinay, rajesh, suresh }
+
+     Parent table : 
+     1) Customer : 
+    Primary key : Yes   No                  No                  No
+        Customer ID     Customer Name       Contact name        address
+        1001            Vinay               vinay               tirupati
+        2002            Kumar               rajesh              hyderabad
+        3003            suresh              suresh              bangalore
+        4004            praveen             lilly               tirupati
+
+    Child table : 
+    2) Orders : 
+       Primary key      Foriegn Key
+        Order ID        Customer ID         Employee ID         Order Date
+        10301           4004                A204                20-08-2022
+        10302           4004                A204                22-08-2022
+        10303           2002                A202                19-08-2022
+        10304           1001                A201                07-08-2022
+
+Data Integrity and Constraints : 
+
+    1) maintaining and assuring the cosistency of data 
+    2) Constraints
+
+    Three types of integrity constraint : 
+        1) Entity Integrity : 
+            ex : PRIMARY KEY 
+        2) Domain Integrity : 
+            ex : Data types, Check Constraints 
+        3) Referential Integrity : 
+            ex : FOREIGN KEY
+
+    Constraint Type : 
+
+        Single Column Constraint        Single Column
+        Composite Constraint            Multiple Column
+
+        Various Constraints : 
+
+            1) NOT NULL
+            2) PRIMARY KEY 
+            3) CHECK 
+            4) UNIQUE 
+            5) FOREIGN KEY 
+            6) DEFAULT 
+
+Candidate Key : 
+
+Primary key : 
+    Uniquely identify a tuple in a relation.
+
+Sql Commands and Data Types : 
+    1) ISO Standards.
+
+    1) DDL  : 
+        Data Definition Language : 
+            structure, i.e, schema of relational database.
+            Commands : 
+                1) Creation
+                2) modification
+                3) deletion
+
+                    ex : 1) Tables
+                         2) Views
+                         3) Store procedures
+                         4) Indexes
+                         5) Constraints
+
+                1) CREATE 
+                    create a new database object
+                2) ALTER 
+                    Modify existing database objects
+                3) DROP 
+                    Delete existing database object 
+                4) TRUNCATE 
+                    Remove all rows from table
+    2) DML
+        Data Manipulation language
+        a) Specify commands -> used to make changes to the database.
+		b) DML : insertion, selection, updation, deletion of database objects : 
+
+            1) INSERT : 
+                Create a new row in the table 
+            2) UPDATE : 
+                Modify data in the table 
+            3) DELETE : 
+                delet data from the table 
+            4) SELECT : 
+                Retrieve data from the table 
+
+    3) DCL
+        Data Control Language.
+        Provide access to the various database objects.
+
+        DBA's -> Database Administrators.
+
+            1) GRANT : 
+                Provides access rights on database 
+            2) REVOKE : 
+                Withdraws access rights on database
+
+    4) TCL : 
+        Transaction Control Language.
+
+            1) COMMIT : 
+                Saves database changes and end transaction 
+            2) ROLLBACK : 
+                Undo changes that are not commited and ends transaction.
+
+DataTypes and Operators : 
+
+    1) Data Types : 
+        1) Character Datatype 
+        2) Integral Datatype 
+        3) Non-Integral Datatype 
+        4) Miscellaneous Datatype 
+    
+    2) Operators : 
+        1) Arithematic Operators
+        2) Comparision Operators
+        3) Logical Operators 
+
+    SQL Character Datatype : 
+
+                    CHAR(n)                 VARCHAR(n)
+
+Useful for          having pre              Storing Character whose length
+                    determined length       vary a lot 
+
+Storage Size        size of n characters    size of actual no. of characters 
+                                                        +
+                                            fixed size of store length 
+
+storage             trainling spaces are    trailing spaces won't be applied 
+characteristic      applied if data to be 
+                    stored has smaller length 
+                    than n
+
+Maximum size        2000 bytes              8000 bytes 
+
+Example             CHAR(10)                VARCHAR(10)
+                    "HELLO"                 "HELLO"
+                5 bytes + 5 bytes trailing  5 bytes + 2 bytes
+                            spaces          7 bytes 
+                    10 bytes
+
+Alternate Name      CHARACTER(n)            CHARACTER VARYING(n)
+
+
+    SQL Integral Datatype : 
+
+        1) SAMLLINT 
+        2) INTEGER 
+        3) BIGINT 
+
+        ex : 2300, 3400, 23, 1
+
+        38 digits of precision.
+    
+    SQL Non-Integral Datatype : 
+
+        1) NUMERIC
+        2) DECIMAL
+        3) NUMBER
+
+        ex : 12.3, 34.5
+
+        NUMERIC(3,2) -> 1.11, 2.34
+
+        3 -> precision
+        2 -> scale
+
+
+    Sql Miscellaneous DataTypes : 
+
+        1) DATE :
+            DD-MM-YY ex : 17-APR-94
+        2) TIMESTAMP :
+            1 billionth(9 digts)
+            ex : 20-JUL-69 18.00.000000 PM
+        3) VARBINARY(MAX) : 
+            to store data that exceeds 8000 bytes of size 
+
+    
+    Operators  :
+
+        Arithematic Operators : 
+
+            Operator            Symbol      Example
+            Addition            +           5+6 -> 11
+            Subtraction         -
+            Multiplication      *
+            Division            /
+
+        Comparision Operators : 
+
+            Operator            Symbol              Usage           Result 
+
+            Equal to            =                   15 = 5          false
+
+            Not Equal to        <>                  15 <> 5         true 
+            
+            Greater than        >                   15 > 5          true
+
+            Less than           <                   15 < 5          false
+             
+            Greater than        >=                  15 >= 5         true
+            or equal to
+
+            Less than           <=                  15 <= 5         false
+            or equal to
+
+    Logical Operator : 
+
+            1) Comparision Operator : 
+
+            Operator        Symbol          Usage               Example 
+            Range           BETWEEN         matches
+                                            a values between    salary BETWEEN 2000 and 3000
+                                            a range of value    
+
+            List            IN              Matches any of the  Country IN ("IND, "USA", "UK")
+                        (List of values)    list of values
+
+        String pattren      LIKE            Matches a character Percentage LIKE "10%"   
+        matching                            pattren
+
+        NULL Test           IS NULL         is a NULL value       BONUS IS NULL  
+
+           2) Logical Operator : 
+
+            Operator        Symbol          Usage               Example 
+            And             AND             both conditions     salary >= 3000 and Dept = "MNG"
+                                            are true 
+            Or              OR              either one of the   salary >= 3000 or Dept = "MNG"
+                                            condition is true 
+
+            Not             NOT             returns true if the Id NOT in(2, 3) 
+                                            condition is false 
+
+    Expressions : 
+
+        1) Constant Values 
+        2) Operators
+        3) Brackets 
+
+        SELECT and WHERE 
+
+        BODMAS rule
+
+        3 + 4 * 5 * ( 9 - 7 ) = 43
+
+        3 + 4 * 5 * 9 - 7 = 176
+
+
+
+        

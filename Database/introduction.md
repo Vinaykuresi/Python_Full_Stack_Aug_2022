@@ -58,3 +58,70 @@ RDBMS(Relational Database management system) :
         4004            Geetha          34756788        45000        18-06-2000
 
 CREATE DATABASE SampleDB;
+
+DDL Commnads : 
+    1) Creation
+    2) Modification
+    3) Deletion.
+
+        a) Tables
+        b) Views
+        c) Stored Proceedures
+        4) indexs
+        5) Constraints
+    
+    1) CREATE
+    2) ALTER
+    3) DROP
+    4) TRUNCATE
+
+DML Commands : 
+
+    1) INSERT
+    2) UPDATE
+    3) DELETE
+    4) SELECT
+
+DCL Commands : 
+
+    1) GRANT
+    2) REVOKE
+
+TCL Commands : 
+
+    1) COMMIT
+    2) ROLLBACK
+
+SQL Chracter datatypes : 
+
+
+                CHAR(n)                 VARCHAR(n)
+
+Useful for      pre-determined          length vary a lot
+                length
+
+Storage size    n length                size of n characters
+                characters                      +
+                                        fixed size of store length
+
+Example         CHAR(10) :              VARCHAR(10)
+                "HELLO" -> 10 bytes     "Hello" -> 5 bytes + 2 bytes
+            5 char + 5 trailing spaces  7 bytes
+                10 bytes
+
+Alternate Name  CHARACTER(N)            CHARACTER VARYING(N)
+
+SQL Integral datatype :
+
+    1) SMALLINT
+    2) INTEGER
+    3) BIGINT
+
+SQL Non-Integral datatype : 
+
+    1) Precision -> total no of digits | digts before + after : decimal points
+    2) Scale -> no of digits after decimal point
+
+    ex :  NUMERIC(3, 1) -> 23.1
+          3 -> PRECISION
+          1 -> SCALE
