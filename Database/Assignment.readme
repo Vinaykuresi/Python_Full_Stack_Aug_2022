@@ -1,0 +1,11 @@
+    Assignment : 
+
+        Product Table : 
+            ProductId
+            PDescription
+            Price 
+            Category
+            Discount
+
+            1)  display -> pid, desc, cat, dis -> dis more than 5%.
+            2)  display -> pid, desc, cat, dis -> desc = null.

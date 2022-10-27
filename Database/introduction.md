@@ -125,3 +125,7 @@ SQL Non-Integral datatype :
     ex :  NUMERIC(3, 1) -> 23.1
           3 -> PRECISION
           1 -> SCALE
+
+    Distinct :
+
+        remove duplicates using Select clause
