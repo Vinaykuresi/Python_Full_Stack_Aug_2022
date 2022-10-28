@@ -129,3 +129,32 @@ SQL Non-Integral datatype :
     Distinct :
 
         remove duplicates using Select clause
+
+
+    Order of Query Execution : 
+
+        FJWGHSDO -> 
+
+            F -> From 
+            J -> Join 
+            W -> Where 
+            G -> Group By 
+            H -> Having 
+            S -> Select 
+            D -> Distinct 
+            O -> Order By
+
+    Function : 
+
+        1) Numeric Function 
+        2) Character Function 
+        3) Conversion Function 
+        4) Date Function 
+        5) Aggregation Function 
+
+                Aggregation fucntions operate on multiple rows to return a single row.
+
+                ex : SUM(total), AVG(average)
+                     MIN(lowest value), MAX(highest value), COUNT(number of rows) considers NULL, ex :  COUNT(*) 
+
+    
