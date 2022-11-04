@@ -157,4 +157,30 @@ SQL Non-Integral datatype :
                 ex : SUM(total), AVG(average)
                      MIN(lowest value), MAX(highest value), COUNT(number of rows) considers NULL, ex :  COUNT(*) 
 
+Joins : 
+
+    1) Inner Join :
+
+            A and B -> A intersect B
+
+    2) Self Join :
+
+            A and A
+
+    3) Left Outer Join :
+
+            A and B -> Full A and comm B
+
+    4) Right Outer Join :
+
+            A and B -> Comm A and Full B
+
+    5) Full Outer JOin :
+
+            A and B -> Full A and Full B
+
+    6) Cross Join( Cartesian Product Join ) :
+
+            
+
     

@@ -37,6 +37,11 @@ select
 *
 from Student;
 
+-- Distinct 
+select 
+distinct Address 
+from Student; 
+
 select 
 StudentId, Fname as FullName 
 from Student;
@@ -91,7 +96,7 @@ select
 Dept, avg(Price) as Average_Fees
 from Student 
 group by Dept 
-having avg(Price) > 30000;
+having avg(Price) > 38500;
 
 -- 1) From 2) group 3) having 4) select
 
@@ -105,9 +110,22 @@ where Price > 35000
 group by Dept 
 having count(StudentId) > 1;
 
+select 
+Dept, sum(Price) 
+from Student 
+where Price >= 30000
+group by Dept
+having count(StudentId) > 1;
+
+select
+distinct Dept
+from Student
+where Price > 30000 
+order by Dept;
+
 -- computer table
 
-CREATE TABLE Computer(
+CREATE TABLE Computers(
 	Make varchar(20),
     StudentId integer,
 	foreign key (StudentId) REFERENCES Student(StudentId) ,
@@ -115,21 +133,31 @@ CREATE TABLE Computer(
     MYear integer
 ); 
 
-INSERT INTO Computer values("Dell", 1001, "Vostro", 2020);
-INSERT INTO Computer values("Lenevo", 1002, "Edge", 2019);
-INSERT INTO Computer values("Dell", 1003, "Precision", 2018);
-INSERT INTO Computer values("Lenevo", 1004, "Horizon", 2019);
-INSERT INTO Computer values("Asus", 1005, "Vivobook", 2018);
-INSERT INTO Computer values("Asus", 1006, "Zenbook", 2020);
+INSERT INTO Computers values("Dell", 1001, "Vostro", 2020);
+INSERT INTO Computers values("Lenevo", 1002, "Edge", 2019);
+INSERT INTO Computers values("Dell", 1003, "Precision", 2018);
+INSERT INTO Computers values("Lenevo", 1004, "Horizon", 2019);
+INSERT INTO Computers values("Asus", 1005, "Vivobook", 2018);
+INSERT INTO Computers values("Asus", 1006, "Zenbook", 2020);
 
-select * from Computer;
+select
+*
+from Computers; 
 
--- cross join as Cartesian Product
+-- Cross Join
 
 select 
-S.StudentId, S.Fname as FirstName, S.StudentId, C.StudentId as Comp_alloc_stud, C.Model
-from Student S 
-cross join Computer C;   
+Stu.StudentId, Stu.Fname as Firstname, Com.StudentId, Com.Make 
+from Student Stu cross join Computers Com; 
+
+
+-- Inner Join
+select
+Stu.StudentId, Stu.Fname as FirstName, Stu.Dept, Com.Make, Com.Model 
+from Student Stu inner join Computers Com 
+on Stu.StudentId = Com.StudentId;
+
+
 
 
 
