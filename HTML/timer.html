@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            Timer Component
+        </title>
+    </head>
+    <body style="font-weight: bold;">
+        <span>The timer Component : </span><span id="timer"></span>
+        <script>
+            var timer = 0
+            var timer_refrence = document.getElementById("timer")
+            setInterval(() =>{
+                timer_refrence.innerHTML = timer++
+            }, 1000)
+        </script>
+    </body>
+</html>
