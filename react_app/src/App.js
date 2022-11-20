@@ -3,13 +3,21 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import React from 'react';
 
-import Login from './components/login';
+import Login from './components/Login/login';
+import JavaScriptExpressions from './components/Javascript_Expressions/javascriptExpressions';
+import CondtionalRendering from './components/Conditional_Rendering/conditionalRendering';
+import MapIterations from './components/Looping/mapIteration';
 
 class App extends React.Component{
   render(){
     return(
-      <div className="App">
-        <Login />
+      <div >
+
+        <MapIterations />
+        {/* <CondtionalRendering /> */}
+        {/* <JavaScriptExpressions /> */}
+        {/* <Login /> */}
+
       {/* <header className="App-header">
         {React.createElement("h1",{}, "This is session on React")}
         <h1>This is Session on React</h1>
