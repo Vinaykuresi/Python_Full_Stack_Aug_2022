@@ -3,6 +3,8 @@
 import React from "react";
 import "./mapIteration.css";
 
+import Data from "../Json_Content/data.json"
+
 class MapIterations extends React.Component {
 
     constructor(props) {
@@ -26,18 +28,36 @@ class MapIterations extends React.Component {
 
         return (
             <div className="tableForm">
+                {console.log("Data : ", Data)}
                 <table style={{ border: "2px solid black" }}>
                     <thead>
                         <tr>
+                            <th>Item</th>
+                            <th>EDesciption</th>
+                            <th>Price</th>
+                        </tr>
+                        {/* <tr>
                             <th>Employee Id</th>
                             <th>Employee Name</th>
                             <th>Employee Designation</th>
-                        </tr>
+                        </tr> */}
                     </thead>
                     <tbody>
 
                         {/* With Map Looping */}
+
                         {
+                            Data.length ? Data.map(item => {
+                                return (
+                                    <tr key={item.product_id}>
+                                        <td><img src={item.img} /></td>
+                                        <td>{item.description}</td>
+                                        <td>{item.price}</td>
+                                    </tr>
+                                )
+                            }) : <td rowSpan={3}>Content Not Found</td>
+                        }
+                        {/* {
                             employees.length ? employees.map(employee => {
                                 return (
                                     <tr key={employee.empId}>
@@ -47,7 +67,7 @@ class MapIterations extends React.Component {
                                     </tr>
                                 )
                             }) : <td rowSpan={3}>Content Not Found</td>
-                        }
+                        } */}
 
                         {/* without Loop */}
                         {/* <tr>
