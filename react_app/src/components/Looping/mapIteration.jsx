@@ -5,6 +5,8 @@ import "./mapIteration.css";
 
 import Data from "../Json_Content/data.json"
 
+const headerStyle = { backgroundColor: "black", color: "white" }
+
 class MapIterations extends React.Component {
 
     constructor(props) {
@@ -29,12 +31,13 @@ class MapIterations extends React.Component {
         return (
             <div className="tableForm">
                 {console.log("Data : ", Data)}
-                <table style={{ border: "2px solid black" }}>
-                    <thead>
+                <table className="table table-bordered">
+                {/* <thead style={headerStyle} className="thead-dark"> */}
+                    <thead style={{ backgroundColor: "black", color: "white" }} className="thead-dark">
                         <tr>
-                            <th>Item</th>
-                            <th>EDesciption</th>
-                            <th>Price</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">EDesciption</th>
+                            <th scope="col">Price</th>
                         </tr>
                         {/* <tr>
                             <th>Employee Id</th>
@@ -50,7 +53,7 @@ class MapIterations extends React.Component {
                             Data.length ? Data.map(item => {
                                 return (
                                     <tr key={item.product_id}>
-                                        <td><img src={item.img} /></td>
+                                        <td><img width={300} height={100} src={item.img} /></td>
                                         <td>{item.description}</td>
                                         <td>{item.price}</td>
                                     </tr>
@@ -83,3 +86,4 @@ class MapIterations extends React.Component {
 }
 
 export default MapIterations;
+

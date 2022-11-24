@@ -7,13 +7,14 @@ import Login from './components/Login/login';
 import JavaScriptExpressions from './components/Javascript_Expressions/javascriptExpressions';
 import CondtionalRendering from './components/Conditional_Rendering/conditionalRendering';
 import MapIterations from './components/Looping/mapIteration';
+import Counter from './components/State_and_Props/State/state';
 
 class App extends React.Component{
   render(){
     return(
       <div >
-
-        <MapIterations />
+        <Counter/>
+        {/* <MapIterations /> */}
         {/* <CondtionalRendering /> */}
         {/* <JavaScriptExpressions /> */}
         {/* <Login /> */}
@@ -28,31 +29,4 @@ class App extends React.Component{
 }
 
 export default App;
-
-  
-// function App() {
-
-//   const [timer, setTimer] = useState(0);
-//   var time = 0
-
-//   const timerFunction = () => {
-//     time++
-//     setTimer(time)
-//     // setInterval(() => {
-//     //   setTimer(() => timer++)
-//     // }, 1000)
-//   }
-
-//   useEffect(() => {
-//     const timer_refernce = setInterval(() => timerFunction(), 1000);
-//     return () => clearInterval(timer_refernce)
-//   },[])
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <span>The Timer Component : </span><span>{timer}</span>
-//       </header>
-//     </div>
-//   );
-// }
 

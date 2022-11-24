@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.counter{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.counter p {
+  margin-left: 6rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
