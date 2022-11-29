@@ -1,5 +1,6 @@
 
 import React from "react";
+import CounterValue from "../Props/counter";
 
 class Counter extends React.Component {
 
@@ -25,7 +26,9 @@ class Counter extends React.Component {
     render(){
         return(
             <div className="container counter">
-                <p>{this.state.count}</p>
+                {console.log("Count : ", this.state.count)}
+                {/* <p>{this.state.count}</p> */}
+                <CounterValue value={this.state.count} />
                 <button type="button" class="btn btn-success" onClick={() => this.handleCount("add")}>Increase(+)</button><span>&nbsp;&nbsp;</span>
                 <button type="button" class="btn btn-danger" onClick={() => this.handleCount("sub")}>Decrease(-)</button>
             </div>
