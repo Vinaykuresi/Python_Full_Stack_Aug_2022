@@ -8,12 +8,14 @@ import JavaScriptExpressions from './components/Javascript_Expressions/javascrip
 import CondtionalRendering from './components/Conditional_Rendering/conditionalRendering';
 import MapIterations from './components/Looping/mapIteration';
 import Counter from './components/State_and_Props/State/state';
+import Timer from './components/LifeCycleMethods/Mounting/timer';
 
 class App extends React.Component{
   render(){
     return(
       <div >
-        <Counter/>
+        <Timer />
+        {/* <Counter/> */}
         {/* <MapIterations /> */}
         {/* <CondtionalRendering /> */}
         {/* <JavaScriptExpressions /> */}
