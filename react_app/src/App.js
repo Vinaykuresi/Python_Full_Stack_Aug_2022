@@ -10,11 +10,14 @@ import MapIterations from './components/Looping/mapIteration';
 import Counter from './components/State_and_Props/State/state';
 import Timer from './components/LifeCycleMethods/Mounting/timer';
 
+import AjaxDataHandling from './components/Ajax_and_Axios/ajax';
+
 class App extends React.Component{
   render(){
     return(
       <div >
-        <Timer />
+        <AjaxDataHandling />
+        {/* <Timer /> */}
         {/* <Counter/> */}
         {/* <MapIterations /> */}
         {/* <CondtionalRendering /> */}

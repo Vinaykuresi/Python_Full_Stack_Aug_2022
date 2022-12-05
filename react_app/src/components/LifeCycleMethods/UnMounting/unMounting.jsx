@@ -1,8 +1,9 @@
 
+
 import React from "react";
 import Updates from "../Updating/updates";
 
-class Timer extends React.Component{
+class TimerUnMount extends React.Component{
     constructor(){
         super();
         this.state ={
@@ -26,10 +27,6 @@ class Timer extends React.Component{
     }
 
     render(){
-
-        if(this.state.secondsElapsed >= 5){
-            throw new Error("Count cannot be greater than or equal to 5")
-        }
         return(
             <div>
                 {/* <h2>Timer : {this.state.secondsElapsed}</h2> */}
@@ -39,4 +36,4 @@ class Timer extends React.Component{
     }
 }
 
-export default Timer;
+export default TimerUnMount;
