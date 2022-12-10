@@ -15,11 +15,14 @@ import FunctionalComponent from './components/Hooks/functionalComponents';
 
 import AjaxDataHandling from './components/Ajax_and_Axios/ajax';
 
+import Routes from "./components/Routes/index";
+
 class App extends React.Component{
   render(){
     return(
       <div >
-        <FunctionalComponent/>
+        {/* <Routes /> */}
+        {/* <FunctionalComponent/> */}
         {/* <Form /> */}
         {/* <AjaxDataHandling /> */}
         {/* <Timer /> */}

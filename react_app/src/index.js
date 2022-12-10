@@ -7,11 +7,21 @@ import ErrorHandler from "./components/LifeCycleMethods/ErrorHandling/errorHandl
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Increment_Decrement from "./components/State_and_Props/State/state"
+import Ajax from "./components/Ajax_and_Axios/ajax"
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ErrorHandler>
     <React.StrictMode>
-      <App />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Increment_Decrement />} />
+          <Route path="/amazon" element={<Ajax />} />
+        </Routes>
+      </Router>
     </React.StrictMode>
   </ErrorHandler>
 );
